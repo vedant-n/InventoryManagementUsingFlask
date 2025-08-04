@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome to the Dashboard</h2>
+
+<div class="card my-3">
+  <div class="card-body">
+    <h5 class="card-title">📦 Total Products in Inventory:</h5>
+    <p class="card-text display-6">{{ total }}</p>
+  </div>
+</div>
+
+<a href="{{ url_for('add_product') }}" class="btn btn-success">Add New Product</a>
+<a href="{{ url_for('view_products') }}" class="btn btn-primary">View All Products</a>
+{% endblock %}
